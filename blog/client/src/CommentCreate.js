@@ -4,13 +4,12 @@ import axios from "axios";
 const CommentCreate = ({ postId }) => {
   const [content, setContent] = useState("");
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    const data = {
-      postId,
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
       content,
-    };
-    await axios.post(`http://localhost:4001/posts/${postId}/comments`, data);
+    });
 
     setContent("");
   };
@@ -21,15 +20,12 @@ const CommentCreate = ({ postId }) => {
         <div className="form-group">
           <label>New Comment</label>
           <input
-            type="text"
             value={content}
             onChange={(e) => setContent(e.target.value)}
             className="form-control"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+        <button className="btn btn-primary">Submit</button>
       </form>
     </div>
   );
