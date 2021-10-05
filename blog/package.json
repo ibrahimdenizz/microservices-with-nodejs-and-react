@@ -1,0 +1,20 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "app-frontend:start": "cd client && npm start",
+    "app-comments:start": "cd comments && npm start",
+    "app-event-bus:start": "cd event-bus && npm start",
+    "app-posts:start": "cd posts && npm start",
+    "app-query:start": "cd query && npm start",   
+    "start": "concurrently npm:app-*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.3.0"
+  }
+}
