@@ -8,7 +8,8 @@
     "app-comments:start": "cd comments && npm start",
     "app-event-bus:start": "cd event-bus && npm start",
     "app-posts:start": "cd posts && npm start",
-    "app-query:start": "cd query && npm start",   
+    "app-query:start": "cd query && npm start",
+    "app-moderation:start": "cd moderation && npm start", 
     "start": "concurrently npm:app-*"
   },
   "keywords": [],
