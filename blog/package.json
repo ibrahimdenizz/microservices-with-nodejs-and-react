@@ -10,7 +10,13 @@
     "app-posts:start": "cd posts && npm start",
     "app-query:start": "cd query && npm start",
     "app-moderation:start": "cd moderation && npm start", 
-    "start": "concurrently npm:app-*"
+    "start": "concurrently npm:app-*",
+    "frontend:install": "cd client && npm install",
+    "comments:install": "cd comments && npm install",
+    "event-bus:install": "cd event-bus && npm install",
+    "posts:install": "cd posts && npm install",
+    "query:install": "cd query && npm install",
+    "moderation:install": "cd moderation && npm install" 
   },
   "keywords": [],
   "author": "",
